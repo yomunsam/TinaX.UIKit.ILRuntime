@@ -28,6 +28,35 @@ package name: `io.nekonya.tinax.uikit.ilruntime`
 
 ------
 
+## Usage
+
+Invoke register method when framework is initializing:
+
+``` csharp
+using TinaX;
+using TinaX.XILRuntime;
+using TinaX.XILRuntime.Registers;
+
+namespace Nekonya.Example
+{
+    public class AppBootstrap : IXBootstrap
+    {
+        public void OnInit(IXCore core)
+        {
+            var xil = core.GetService<IXILRuntime>(); 
+            xil.RegisterUIKit(); //extension method, namespace "TinaX.XILRuntime.Registers"
+        }
+        public void OnStart(IXCore core) { }
+        public void OnQuit() { }
+        public void OnAppRestart() { }
+    }
+}
+```
+
+<br>
+
+------
+
 ## Install this package
 
 ### Install via [openupm](https://openupm.com/)
@@ -53,7 +82,8 @@ Modify `Packages/manifest.json` file in your project, and add the following code
         "name": "TinaX",
         "url": "https://registry.npmjs.org",
         "scopes": [
-            "io.nekonya"
+            "io.nekonya",
+            "com.ourpalm"
         ]
     },
     {
@@ -70,7 +100,7 @@ Modify `Packages/manifest.json` file in your project, and add the following code
 If after doing the above, you still cannot find the relevant Packages for TinaX in the "Unity Package Manager" window, You can also try refreshing, restarting the editor, or manually adding the following configuration to "dependencies" node.
 
 ``` json
-"io.nekonya.tinax.core" : "6.6.3"
+"io.nekonya.tinax.uikit.ilruntime" : "6.6.1"
 ```
 
 <br>
@@ -80,10 +110,10 @@ If after doing the above, you still cannot find the relevant Packages for TinaX 
 You can use the following to install and use this package in UPM GUI.  
 
 ```
-git://github.com/yomunsam/TinaX.Core.git
+git://github.com/yomunsam/TinaX.UIKit.ILRuntime.git
 ```
 
-If you want to set a target version, you can use release tag like `#6.6.3`. for detail you can see this page: [https://github.com/yomunsam/TinaX.Core/releases](https://github.com/yomunsam/TinaX.Core/releases)
+If you want to set a target version, you can use release tag like `#6.6.1`. for detail you can see this page: [https://github.com/yomunsam/TinaX.UIKit.ILRuntime/releases](https://github.com/yomunsam/TinaX.UIKit.ILRuntime/releases)
 
 
 
@@ -92,8 +122,9 @@ If you want to set a target version, you can use release tag like `#6.6.3`. for 
 
 ## Dependencies
 
-- [com.neuecc.unirx](https://github.com/neuecc/UniRx#upm-package) :`https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts`
-- [com.cysharp.unitask](https://github.com/Cysharp/UniTask#install-via-git-url) :`https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask`
+- [io.nekonya.tinax.ilruntime](https://github.com/yomunsam/TinaX.ILRuntime) :`git://github.com/yomunsam/TinaX.ILRuntime.git`
+- [io.nekonya.tinax.uikit](https://github.com/yomunsam/TinaX.UIKit) :`git://github.com/yomunsam/TinaX.UIKit.git`
+- [io.nekonya.tinax.xcomponent.ilruntime](https://github.com/yomunsam/TinaX.XComponent.ILRuntime) :`git://github.com/yomunsam/TinaX.XComponent.ILRuntime.git`
 
 > if you install packages by git UPM， You need to install the dependencies manually. Or dependencies will installed automatically by NPM / OpenUPM
 
@@ -111,8 +142,4 @@ You can find out how to use the various features of TinaX in the [documentation]
 
 The following excellent third-party libraries are used in this project:
 
-- **[CatLib](https://catlib.io/)** : lightweight dependency injection container
-- **[UniRx](https://github.com/neuecc/UniRx)** : Reactive Extensions for Unity
-- **[UniTask](https://github.com/Cysharp/UniTask)** : Provides an efficient async/await integration to Unity.
-- **[SharpZipLib](https://github.com/icsharpcode/SharpZipLib)** : a Zip, GZip, Tar and BZip2 library written entirely in C# for the .NET platform. 
-- **[unity-toolbar-extender](https://github.com/marijnz/unity-toolbar-extender)** : Extend the Unity Toolbar with your own Editor UI code.
+- **[ILRuntime](https://github.com/Ourpalm/ILRuntime)** : Pure C# IL Intepreter Runtime, which is fast and reliable for scripting requirement on enviorments, where jitting isn't possible.
