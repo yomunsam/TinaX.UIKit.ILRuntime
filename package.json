@@ -1,0 +1,25 @@
+{
+  "name": "io.nekonya.tinax.uikit.ilruntime",
+  "version": "6.6.1",
+  "displayName": "TinaX.UIKit.ILRuntime",
+  "description": "ILRuntime extension package for TinaX.UIKit.",
+  "unity": "2019.3",
+  "keywords": [
+    "TinaX",
+    "TinaX Framework",
+    "ILRuntime",
+    "UIKit",
+    "TinaX.UIKit"
+  ],
+  "author": {
+    "name": "yomunsam",
+    "email": "yomunsam@gmail.com",
+    "url": "https://yomunchan.moe"
+  },
+  "type": "library",
+  "dependencies": {
+    "io.nekonya.tinax.ilruntime": "6.6.1",
+    "io.nekonya.tinax.uikit":"6.6.5",
+    "io.nekonya.tinax.xcomponent.ilruntime": "6.6.1"
+  }
+}
