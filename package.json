@@ -1,6 +1,6 @@
 {
   "name": "io.nekonya.tinax.uikit.ilruntime",
-  "version": "6.6.2",
+  "version": "6.6.3",
   "displayName": "TinaX.UIKit.ILRuntime",
   "description": "ILRuntime extension package for TinaX.UIKit.",
   "unity": "2019.3",

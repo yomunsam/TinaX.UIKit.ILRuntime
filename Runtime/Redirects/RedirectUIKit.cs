@@ -41,7 +41,7 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
             mapping.Register("OpenUIAsync", 0, 4, new string[]{
                 "System.String",
                 "TinaX.XComponent.XBehaviour",
-                "System.Action`1[TinaX.UIKit.IUIEntity,TinaX.XException]",
+                "System.Action`2[TinaX.UIKit.IUIEntity,TinaX.XException]",
                 "System.Object[]"
             }, OpenUIAsync_Callback_Name_Behaviour_Args);
 
@@ -65,7 +65,7 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
                 "System.String",
                 "TinaX.XComponent.XBehaviour",
                 "TinaX.UIKit.OpenUIParam",
-                "System.Action`1[TinaX.UIKit.IUIEntity,TinaX.XException]",
+                "System.Action`2[TinaX.UIKit.IUIEntity,TinaX.XException]",
                 "System.Object[]"
             }, OpenUIAsync_Callback_Name_Behavior_Param_Args);
 
