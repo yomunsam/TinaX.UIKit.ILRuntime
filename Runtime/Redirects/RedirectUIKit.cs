@@ -1,4 +1,4 @@
-﻿using ILRuntime.CLR.Method;
+using ILRuntime.CLR.Method;
 using ILRuntime.CLR.Utils;
 using ILRuntime.Runtime;
 using ILRuntime.Runtime.Enviorment;
@@ -126,6 +126,10 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
                     {
                         var xcomponent = entity.UIPage.UIMainHandler as TinaX.XComponent.XComponent;
                         XILXComponentUtil.InjectBindings(xcomponent, behaviour);
+                        if (behaviour is XUIBehaviour)
+                        {
+                            ((XUIBehaviour)behaviour).UIEntity = entity;
+                        }
                         xcomponent.AddBehaviour(behaviour);
                     }
                     RedirectUIKitSafe.SetEntityIfXUIBehaviour(ref behaviour, ref entity);
@@ -171,6 +175,10 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
             {
                 var xcomponent = entity.UIPage.UIMainHandler as XComponent.XComponent;
                 XILXComponentUtil.InjectBindings(xcomponent, behaviour);
+                if (behaviour is XUIBehaviour)
+                {
+                    ((XUIBehaviour)behaviour).UIEntity = entity;
+                }
                 xcomponent.AddBehaviour(behaviour);
             }
             RedirectUIKitSafe.SetEntityIfXUIBehaviour(ref behaviour, ref entity);
@@ -223,6 +231,10 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
                     {
                         var xcomponent = entity.UIPage.UIMainHandler as XComponent.XComponent;
                         XILXComponentUtil.InjectBindings(xcomponent, behaviour);
+                        if (behaviour is XUIBehaviour)
+                        {
+                            ((XUIBehaviour)behaviour).UIEntity = entity;
+                        }
                         xcomponent.AddBehaviour(behaviour);
                     }
 
@@ -275,6 +287,10 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
             {
                 var xcomponent = entity.UIPage.UIMainHandler as XComponent.XComponent;
                 XILXComponentUtil.InjectBindings(xcomponent, behaviour);
+                if (behaviour is XUIBehaviour)
+                {
+                    ((XUIBehaviour)behaviour).UIEntity = entity;
+                }
                 xcomponent.AddBehaviour(behaviour);
             }
             RedirectUIKitSafe.SetEntityIfXUIBehaviour(ref behaviour, ref entity);
@@ -328,6 +344,10 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
                     {
                         var xcomponent = entity.UIPage.UIMainHandler as TinaX.XComponent.XComponent;
                         XILXComponentUtil.InjectBindings(xcomponent, behaviour);
+                        if(behaviour is XUIBehaviour)
+                        {
+                            ((XUIBehaviour)behaviour).UIEntity = entity;
+                        }
                         xcomponent.AddBehaviour(behaviour);
                     }
                     RedirectUIKitSafe.SetEntityIfXUIBehaviour(ref behaviour, ref entity);
@@ -386,6 +406,10 @@ namespace TinaX.UIKit.Internal.CLRMethodRedirections
                     {
                         var xcomponent = entity.UIPage.UIMainHandler as XComponent.XComponent;
                         XILXComponentUtil.InjectBindings(xcomponent, behaviour);
+                        if (behaviour is XUIBehaviour)
+                        {
+                            ((XUIBehaviour)behaviour).UIEntity = entity;
+                        }
                         xcomponent.AddBehaviour(behaviour);
                     }
 
